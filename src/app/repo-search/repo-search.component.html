@@ -1,1 +1,63 @@
-<p>repo-search works!</p>
+<div class="container-fluid">
+    <div class="topper">
+
+        <div class="header1">
+            <p class="text1">
+                Having fun? On this page you can search for a specific repository you would like
+                and view its details!
+            </p>
+            <p class="text2">
+                Please input the name of the repository you would like to search. If no result is displayed on submission,
+                ensure you wrote the correct repository and try again.
+            </p>
+            <p class="text3">
+                I hope you get what you are looking for!
+            </p>
+        </div>
+
+        <div class="form-floating" id="inputFields">
+            <input type="text" name="searchInput" #searchInput (keyup.enter)="lookForRepo(searchInput.value)"
+                (keyup.enter)="toggleDisplay()" class="form-control" id="searchInput"
+                placeholder="User to be looked for: ">
+            <label for="searchInput">User to be looked for: </label>
+            <button type="button" (click)="lookForRepo(searchInput.value)" (click)="toggleDisplay()"
+                class="btn btn-outline-dark">
+                Search
+            </button>
+        </div>
+
+    </div>
+
+    <div [hidden]="showResults">
+        <hr>
+        <div class="row" id="searchResults">
+
+            <div class="col" id="col1" *ngFor='let repo of repos'>
+                <div class="card" style="width: 18rem; height:max-content;">
+                    <h5 class="card-header">
+                        {{ repo.owner['login'] }}
+                        <img src="{{ repo.owner['avatar_url'] }}" style = "width:200px; height:200px;"alt="">
+                    </h5>
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        ID: {{ repo.id }} | Language: {{ repo.language }}
+                      </h5>
+                      <p>
+                        Created at: {{ repo.created_at | date }} 
+                      </p>
+                      <p>
+                        Description: {{ repo.description }}
+                      </p>
+                      <p>
+                        Forks: {{repo.forks}}
+                      </p>
+                      <a href = "{{ repo.html_url }}" class="btn btn-primary">
+                        View on Github
+                      </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
