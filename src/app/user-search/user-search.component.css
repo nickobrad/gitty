@@ -1,0 +1,84 @@
+.container-fluid{
+    background-image: url(../../assets/bg5.jpg);
+}
+.header1{
+    width: 100%;
+    text-align: center;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+} 
+.topper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#col1{
+    padding: 20px 0px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#inputFields{
+    display:flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 60%;
+    margin-bottom: 10px;
+}
+.middler{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+button{
+    margin-left: 10px;
+    width: 100px;
+    background-color: darkcyan;
+}
+img{
+    height: 240px;
+    width: 240px;
+}
+
+.card{
+    margin: 10px 5px;
+}
+.col-md-4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5px;    
+}
+.repoBody{
+    padding-top: 10px;
+}
+.repoText{
+    padding-bottom: 10px;
+}
+.repoText a{
+    justify-self: center;
+}
+.heading {
+    border-left: 2px solid lightcoral;
+    border-bottom: 2px solid lightblue;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+}
+.rtheading {
+    border-right: 2px solid lightseagreen;
+    border-bottom: 2px solid lightslategray;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+}
+.rtfoot {
+    border-left: 2px solid lightskyblue;
+    border-bottom: 2px solid lightgreen;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;} 
