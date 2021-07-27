@@ -7,7 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { RepoSearchComponent } from './repo-search/repo-search.component';
-import { UsertemplateComponent } from './userclass/usertemplate/usertemplate.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ShowrepoComponent } from './showrepo/showrepo.component';
+import { DateCountPipe } from './datecounter.pipe'
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { UsertemplateComponent } from './userclass/usertemplate/usertemplate.com
     HomepageComponent,
     UserSearchComponent,
     RepoSearchComponent,
-    UsertemplateComponent
+    ShowrepoComponent,
+    DateCountPipe,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
