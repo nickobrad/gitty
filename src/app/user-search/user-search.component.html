@@ -1,1 +1,100 @@
-<p>user-search works!</p>
+<div class="container-fluid">
+    <div class="topper">
+
+        <div class="header1">
+            <p class="text1">
+                Greetings! Welcome to the Gitty Search page.
+            </p>
+            <p class="text2">
+                Please input the name of the user you would like to search. If no result is displayed on submission,
+                ensure you wrote the correct username and try again.
+            </p>
+            <p class="text3">
+                Have Fun stalking!
+            </p>
+        </div>
+
+        <div class="form-floating" id="inputFields">
+            <input type="text" name="searchInput" #searchInput (keyup.enter)="lookForUser(searchInput.value)"
+                (keyup.enter)="toggleDisplay()" class="form-control" id="searchInput"
+                placeholder="User to be looked for: ">
+            <label for="searchInput">User to be looked for: </label>
+            <button type="button" (click)="lookForUser(searchInput.value)" (click)="toggleDisplay()"
+                class="btn btn-outline-dark">
+                Search
+            </button>
+        </div>
+
+    </div>
+
+    <div [hidden]="showResults">
+        <hr>
+        <div class="row" id="searchResults">
+
+            <div class="col-lg-4" id="col1">
+
+                <div class="userImage">
+                    <img src="{{user.avatar_url}}" class="img-fluid" alt="" srcset="">
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            {{ user.name }} / {{ user.login }}
+                          </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            ID: {{ user.id }} | Followers: {{ user.followers }}
+                          </h6>
+                        <p class="card-text">
+                          Location: {{user.location}}
+                        </p>
+                        <p>
+                          Bio: {{ user.bio }}
+                        </p>
+                        <p>
+                          Public Repositories: {{ user.public_repos }}
+                        </p>
+                        <p>
+                          <a href="{{user.html_url}}" class="card-link"> View my online profile </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-8" id="col1">
+                <div class="container-fluid">
+                    <div class="row" *ngFor='let repo of repos'>
+
+                        <div class="repoBody">
+                            <h6 class="heading">
+                                {{ repo.name }}
+                            </h6>
+                        </div>
+
+                        <div class="repoText">
+                            <h6 class="rtheading" style="font-weight:400;">
+                                ID: {{ repo.id }} | Language: {{ repo.language }}
+                            </h6>
+
+                            <h5 class="rtfoot" style="font-weight:300;">
+                               Description: {{ repo.description }}
+                            </h5>
+                            <p>
+                                Forks: {{ repo.forks }}
+                            </p>
+                        </div>
+
+                        <div class="linkbtn">
+                            <a href="{{repo.html_url}}" class="btn btn-primary"> View on Github </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
