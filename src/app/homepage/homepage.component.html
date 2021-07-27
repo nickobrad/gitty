@@ -1,1 +1,70 @@
-<p>homepage works!</p>
+<div class="container-fluid">
+  <div class="row" id="row1">
+
+    <div class="col-lg-6" id = "col1">
+        <img src="{{user.avatar_url}}" class = "img-fluid" alt="" srcset="">
+    </div>
+
+    <div class="col-lg-6" id = "col2">
+      <div class="card" style="width: 18rem; height: 25rem">
+          <div class="card-body">
+            <h5 class="card-title">
+                {{ user.name }} / {{ user.login }}
+              </h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+                ID: {{ user.id }} | Followers: {{ user.followers }}
+              </h6>
+            <p class="card-text">
+              Location: {{user.location}}
+            </p>
+            <p>
+              Bio: {{ user.bio }}
+            </p>
+            <p>
+              Public Repositories: {{ user.public_repos }}
+            </p>
+            <p>
+              <a href="{{user.html_url}}" class="card-link"> View my online profile </a>
+            </p>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footsie">
+    <div class="title">
+      <p style="font-size:larger">
+        My Repositories are shown below. Feel free to click on the
+        link to see them on Github.
+      </p>
+    </div>
+    <div class="row" id = "row11">
+      <div class="col-sm-4" id = "col11" *ngFor = 'let repo of repos' >
+        <div class="card" style="height: min-content;">
+          <h5 class="card-header">
+              {{ repo.name }}
+          </h5>
+          <div class="card-body">
+            <h5 class="card-title">
+              ID: {{ repo.id }} | Language: {{ repo.language }}
+            </h5>
+            <p>
+              Created at: {{ repo.created_at | date }} 
+            </p>
+            <p>
+              Description: {{ repo.description }}
+            </p>
+            <p>
+              Forks: {{repo.forks}}
+            </p>
+            <a href = "{{ repo.html_url }}" class="btn btn-primary">
+              View on Github
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>
