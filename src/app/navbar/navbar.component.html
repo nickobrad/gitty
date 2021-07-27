@@ -1,1 +1,33 @@
-<p>navbar works!</p>
+<div class="container-fluid">
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+      
+    <div class="left">
+      <a class="navbar-brand" href="#">
+        <img src="../../assets/circle.svg" alt="" width="30" height="28" class="d-inline-block align-text-top">
+        <span class = "topic">Gitty</span>
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto" id = "links">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink = "homepage" routerLinkActive = "active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "user-search" routerLinkActive = "active">Search By User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "repo-search" routerLinkActive = "active">Search By Repository</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</div>
+
+
