@@ -1,0 +1,40 @@
+.container-fluid{
+    background-image: url(../../assets/bg2.jpg);
+}
+.card{
+    background-image: url(../../assets/bg4.jpg);
+}
+img{
+    height: 300px;
+    width: 300px;
+}
+#col1{
+    padding: 20px 0px ;
+    /* background-color: blue; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#col2{
+    padding: 20px 0px ;
+    /* background-color:brown; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#row11{
+    /* background-color: black; */
+    /* flex-direction: column; */
+    align-items: center;
+    /* justify-content: center; */
+    width: 70%;
+
+}
+#col11{
+    padding: 5px;
+}
+.footsie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
