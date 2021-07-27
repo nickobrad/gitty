@@ -1,5 +1,9 @@
-.container-fluid{
-    background-image: url(../../assets/bg5.jpg);
+#big{
+    background-image: url(../../assets/bg2.jpg);
+    height: 100%;
+}
+#hidden{
+    background-color:transparent;
 }
 .header1{
     width: 100%;
@@ -81,4 +85,5 @@ img{
     border-bottom: 2px solid lightgreen;
     padding-left: 10px;
     padding-bottom: 10px;
-    border-radius: 3px;} 
+    border-radius: 3px;
+} 

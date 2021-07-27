@@ -1,0 +1,34 @@
+.container-fluid{
+    /* background-image: url(../../assets/bg6.jpg);
+    background-size: fill; */
+    background-color: cornflowerblue;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+}
+.col{
+    padding: 10px 5px;
+}
+.header1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:350px;
+    color: whitesmoke
+}
+#inputFields{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+button{
+    margin: 1.5% 0;
+    width:100px;
+}
+.topper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

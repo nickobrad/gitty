@@ -2,7 +2,7 @@
     background-image: url(../../assets/bg2.jpg);
 }
 .card{
-    background-image: url(../../assets/bg4.jpg);
+    background-color: lightslategray;
 }
 img{
     height: 300px;

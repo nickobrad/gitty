@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="topper">
 
-        <div class="header1">
+        <div class="header1" style="text-align: center;">
             <p class="text1">
                 Having fun? On this page you can search for a specific repository you would like
                 and view its details!
@@ -17,10 +17,10 @@
 
         <div class="form-floating" id="inputFields">
             <input type="text" name="searchInput" #searchInput (keyup.enter)="lookForRepo(searchInput.value)"
-                (keyup.enter)="toggleDisplay()" class="form-control" id="searchInput"
+                 class="form-control" id="searchInput"
                 placeholder="User to be looked for: ">
             <label for="searchInput">User to be looked for: </label>
-            <button type="button" (click)="lookForRepo(searchInput.value)" (click)="toggleDisplay()"
+            <button type="button" (click)="lookForRepo(searchInput.value)" 
                 class="btn btn-outline-dark">
                 Search
             </button>
@@ -28,36 +28,40 @@
 
     </div>
 
-    <div [hidden]="showResults">
-        <hr>
+    <!-- <div [hidden]="showResults"> -->
+        <!-- <hr> -->
         <div class="row" id="searchResults">
 
             <div class="col" id="col1" *ngFor='let repo of repos'>
-                <div class="card" style="width: 18rem; height:max-content;">
-                    <h5 class="card-header">
-                        {{ repo.owner['login'] }}
+                <div class="card" style="width:auto; height:auto;">
+                    <h5 class="card-header" style="align-items: center; justify-content: center;">
                         <img src="{{ repo.owner['avatar_url'] }}" style = "width:200px; height:200px;"alt="">
                     </h5>
                     <div class="card-body">
-                      <h5 class="card-title">
-                        ID: {{ repo.id }} | Language: {{ repo.language }}
-                      </h5>
-                      <p>
-                        Created at: {{ repo.created_at | date }} 
-                      </p>
-                      <p>
-                        Description: {{ repo.description }}
-                      </p>
-                      <p>
-                        Forks: {{repo.forks}}
-                      </p>
-                      <a href = "{{ repo.html_url }}" class="btn btn-primary">
-                        View on Github
-                      </a>
+                        <h5>
+                            Name: {{ repo.owner['login'] }}
+                        </h5>
+                        <h5 class="card-title">
+                            ID: {{ repo.id }} | Language: {{ repo.language }}
+                        </h5>
+                        <p>
+                            Created at: {{ repo.created_at | date }} 
+                        </p>
+                        <p>
+                            Description: {{ repo.description }}
+                        </p>
+                        <p>
+                            Forks: {{repo.forks}}
+                        </p>
+                        <a href = "{{ repo.html_url }}" class="btn btn-primary">
+                            View on Github
+                        </a>
                     </div>
                 </div>
             </div>
 
         </div>
-    </div>
+    <!-- </div> -->
 </div>
+
+<!-- (keyup.enter)="toggleDisplay()" -->
