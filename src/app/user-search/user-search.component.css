@@ -1,9 +1,6 @@
 #big{
-    background-image: url(../../assets/bg2.jpg);
+    /* background-image: url(../../assets/bg2.jpg); */
     height: 100%;
-}
-#hidden{
-    background-color:transparent;
 }
 .header1{
     width: 100%;

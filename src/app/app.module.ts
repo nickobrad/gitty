@@ -9,7 +9,8 @@ import { UserSearchComponent } from './user-search/user-search.component';
 import { RepoSearchComponent } from './repo-search/repo-search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShowrepoComponent } from './showrepo/showrepo.component';
-import { DateCountPipe } from './datecounter.pipe'
+import { DateCountPipe } from './datecounter.pipe';
+import { ItalicsDirective } from './italics.directive'
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { DateCountPipe } from './datecounter.pipe'
     RepoSearchComponent,
     ShowrepoComponent,
     DateCountPipe,
+    ItalicsDirective,
   ],
   imports: [
     BrowserModule,

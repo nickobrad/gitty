@@ -10,7 +10,7 @@ import { Repotemplate } from '../repoclass/repotemplate';
   styleUrls: ['./repo-search.component.css']
 })
 export class RepoSearchComponent implements OnInit {
-  // showResults = true;
+  showResults = true;
 
   user!: Usertemplate;
   repos: any [] = [];
@@ -33,9 +33,9 @@ export class RepoSearchComponent implements OnInit {
       )
     }
 
-    // toggleDisplay(){
-    //   this.showResults = !this.showResults;
-    // }
+    toggleDisplay(){
+      this.showResults = !this.showResults;
+    }
 
   ngOnInit(): void {
   }

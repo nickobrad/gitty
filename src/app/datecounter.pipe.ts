@@ -12,7 +12,9 @@ export class DateCountPipe implements PipeTransform {
       today.getTime()
     );
 
-    var dateDifference = Math.abs(value - todayWithTime);
+    var convertedDate:any = new Date(value.substring(0,10)) 
+
+    var dateDifference = Math.abs(convertedDate - todayWithTime);
 
     const secondsInYear = 31536000;
     const secondsInMonth = 2628000;

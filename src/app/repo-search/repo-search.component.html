@@ -16,11 +16,11 @@
         </div>
 
         <div class="form-floating" id="inputFields">
-            <input type="text" name="searchInput" #searchInput (keyup.enter)="lookForRepo(searchInput.value)"
+            <input type="text" name="searchInput" #searchInput (keyup.enter)="toggleDisplay()" (keyup.enter)="lookForRepo(searchInput.value)"
                  class="form-control" id="searchInput"
                 placeholder="User to be looked for: ">
             <label for="searchInput">User to be looked for: </label>
-            <button type="button" (click)="lookForRepo(searchInput.value)" 
+            <button type="button" (click)="lookForRepo(searchInput.value)" (keyup.enter)="toggleDisplay()"
                 class="btn btn-outline-dark">
                 Search
             </button>
@@ -28,8 +28,8 @@
 
     </div>
 
-    <!-- <div [hidden]="showResults"> -->
-        <!-- <hr> -->
+    <div [hidden]="showResults">
+        <hr>
         <div class="row" id="searchResults">
 
             <div class="col" id="col1" *ngFor='let repo of repos'>
@@ -38,14 +38,14 @@
                         <img src="{{ repo.owner['avatar_url'] }}" style = "width:200px; height:200px;"alt="">
                     </h5>
                     <div class="card-body">
-                        <h5>
+                        <h5 appItalics>
                             Name: {{ repo.owner['login'] }}
                         </h5>
                         <h5 class="card-title">
                             ID: {{ repo.id }} | Language: {{ repo.language }}
                         </h5>
                         <p>
-                            Created at: {{ repo.created_at | date }} 
+                            Created at: {{ repo.created_at | dateCount }} 
                         </p>
                         <p>
                             Description: {{ repo.description }}
@@ -61,7 +61,6 @@
             </div>
 
         </div>
-    <!-- </div> -->
+    </div>
 </div>
 
-<!-- (keyup.enter)="toggleDisplay()" -->
